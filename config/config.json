@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "my_chat_app",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "auth": {
+    "jwt_secret": "poiuytrewq",
+    "jwt_expiresin": "1h",
+    "saltRounds": 10,
+    "refresh_token_secret": "cG9pdXl0cmV3cQ==",
+    "refresh_token_expiresin": "2h"
+  }
+}
