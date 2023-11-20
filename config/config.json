@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "uyz43ha186vlq77h",
-    "password": "lkmWEUQpM2QEs1AGu5m2",
-    "database": "bebpeneidpvz7rs5aj56",
-    "host": "bebpeneidpvz7rs5aj56-mysql.services.clever-cloud.com",
+    "username": "root",
+    "password": "root",
+    "database": "my_chat_app",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "uyz43ha186vlq77h",
-    "password": "lkmWEUQpM2QEs1AGu5m2",
-    "database": "bebpeneidpvz7rs5aj56",
-    "host": "bebpeneidpvz7rs5aj56-mysql.services.clever-cloud.com",
+    "username": "root",
+    "password": "root",
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "uyz43ha186vlq77h",
-    "password": "lkmWEUQpM2QEs1AGu5m2",
-    "database": "bebpeneidpvz7rs5aj56",
-    "host": "bebpeneidpvz7rs5aj56-mysql.services.clever-cloud.com",
+    "username": "root",
+    "password": "root",
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "auth": {
