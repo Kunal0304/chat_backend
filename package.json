@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,6 @@
     "mysql2": "^3.6.3",
     "sequelize": "^6.34.0",
     "sequelize-cli": "^6.6.2",
-    "socket.io": "^4.7.2",
-    "yarn": "^1.22.21"
+    "socket.io": "^4.7.2"
   }
 }
