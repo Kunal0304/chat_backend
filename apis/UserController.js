@@ -89,11 +89,11 @@ exports.registerUser = async (req, res) => {
 
 exports.authUser = async (req, res) => {
   const { email, password } = req.body;
-
+  console.log("aaaaaaaaaaaaaaaaaaaa")
   try {
     // Find the user using the Sequelize model
-    const user = await User.findOne({ where: { email } });
-
+    const user = await User.findOne({ where: { email:email } });
+console.log(user,"======")
     if (!user) {
       return res.status(401).json({ message: "Invalid Email or Password" });
     }

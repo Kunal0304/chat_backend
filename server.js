@@ -1,24 +1,34 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { allUsers, registerUser, authUser } = require('./apis/UserController');
 const authenticateToken = require('./middleware/authentication')
 const { sequelize } = require('./models');
 const chatRoutes = require('./routes/chat');
 const userRoutes = require('./routes/user');
+// const userRoutes = require('./public');
+const path = require('path')
 
 
 const app = express();
 app.use(bodyParser.json());
 
+
+
 app.use(cors());
 // Your Sequelize initialization code goes here
-
-// app.post('/api/user', registerUser);
-// app.post('/api/user/login', authUser);
+// app.use(express.static(path.join(__dirname,'public')))
+// app.use("/public/User/",express.static('public'))
 app.use('/api', userRoutes);
 app.use('/api',authenticateToken, chatRoutes);
 
+app.use(express.static(path.join(__dirname, 'public', 'User')));
+
+// Your API routes go here
+
+// For any other route, serve the index.html file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'User', 'index.html'));
+});
 // Start the server
 const PORT = process.env.PORT || 5000;
 
